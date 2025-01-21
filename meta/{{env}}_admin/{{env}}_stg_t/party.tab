@@ -1,0 +1,22 @@
+CREATE SET TABLE {{env}}_stg_t.party ,FALLBACK ,
+     NO BEFORE JOURNAL,
+     NO AFTER JOURNAL,
+     CHECKSUM = DEFAULT,
+     DEFAULT MERGEBLOCKRATIO,
+     MAP = TD_MAP1
+     (
+      party_id INTEGER NOT NULL,
+      party_stat SMALLINT)
+UNIQUE PRIMARY INDEX PARTY_UPI ( party_id );
+
+
+comment on TABLE "{{env}}_stg_t"."party" is 'the party';
+
+
+
+
+COLLECT STATISTICS 
+                   -- default SYSTEM SAMPLE PERCENT 
+            COLUMN ( party_id ) 
+                ON {{env}}_stg_t.party 
+;

@@ -1,0 +1,39 @@
+CREATE MULTISET TABLE {{env}}_sem_t.PRODUCT_SALES ,FALLBACK ,
+     NO BEFORE JOURNAL,
+     NO AFTER JOURNAL,
+     CHECKSUM = DEFAULT,
+     DEFAULT MERGEBLOCKRATIO,
+     MAP = TD_MAP1
+     (
+      PRODUCT_KEY INTEGER NOT NULL,
+      PRODUCT_NAME VARCHAR(255) CHARACTER SET LATIN CASESPECIFIC,
+      PRODUCT_CATEGORY VARCHAR(100) CHARACTER SET LATIN CASESPECIFIC,
+      TOTAL_SALES DECIMAL(18,2),
+      TOTAL_QUANTITY_SOLD INTEGER,
+      START_DATE DATE FORMAT 'YY/MM/DD' NOT NULL,
+      END_DATE DATE FORMAT 'YY/MM/DD',
+      CREATED_AT TIMESTAMP(6),
+      UPDATED_AT TIMESTAMP(6), 
+PRIMARY KEY ( PRODUCT_KEY ))
+;
+
+
+comment on TABLE "{{env}}_sem_t"."PRODUCT_SALES" is 'Table summarizing product sales performance and metrics with historical tracking';
+
+
+COMMENT ON COLUMN {{env}}_sem_t.PRODUCT_SALES.PRODUCT_KEY IS 'Primary key for the product sales summary, derived from PRODUCT_DIM';
+COMMENT ON COLUMN {{env}}_sem_t.PRODUCT_SALES.PRODUCT_NAME IS 'Name of the product';
+COMMENT ON COLUMN {{env}}_sem_t.PRODUCT_SALES.PRODUCT_CATEGORY IS 'Category of the product';
+COMMENT ON COLUMN {{env}}_sem_t.PRODUCT_SALES.TOTAL_SALES IS 'Total sales amount for the product';
+COMMENT ON COLUMN {{env}}_sem_t.PRODUCT_SALES.TOTAL_QUANTITY_SOLD IS 'Total quantity of the product sold across all orders';
+COMMENT ON COLUMN {{env}}_sem_t.PRODUCT_SALES.START_DATE IS 'Start date for the historical record in the semantic layer';
+COMMENT ON COLUMN {{env}}_sem_t.PRODUCT_SALES.END_DATE IS 'End date for the historical record; NULL for the current record';
+COMMENT ON COLUMN {{env}}_sem_t.PRODUCT_SALES.CREATED_AT IS 'Timestamp when the record was created';
+COMMENT ON COLUMN {{env}}_sem_t.PRODUCT_SALES.UPDATED_AT IS 'Timestamp when the record was last updated';
+
+
+COLLECT STATISTICS 
+                   -- default SYSTEM SAMPLE PERCENT 
+            COLUMN ( PRODUCT_KEY ) 
+                ON {{env}}_sem_t.PRODUCT_SALES 
+;

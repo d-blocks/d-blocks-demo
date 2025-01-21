@@ -1,0 +1,39 @@
+CREATE MULTISET TABLE {{env}}_tgt_t.PAYMENT_METHOD_DIM ,FALLBACK ,
+     NO BEFORE JOURNAL,
+     NO AFTER JOURNAL,
+     CHECKSUM = DEFAULT,
+     DEFAULT MERGEBLOCKRATIO,
+     MAP = TD_MAP1
+     (
+      PAYMENT_METHOD_KEY INTEGER NOT NULL,
+      PAYMENT_METHOD_ID INTEGER,
+      CUSTOMER_KEY INTEGER,
+      METHOD_NAME VARCHAR(100) CHARACTER SET LATIN CASESPECIFIC,
+      DETAILS VARCHAR(255) CHARACTER SET LATIN CASESPECIFIC,
+      START_DATE DATE FORMAT 'YY/MM/DD' NOT NULL,
+      END_DATE DATE FORMAT 'YY/MM/DD',
+      CREATED_AT TIMESTAMP(6),
+      UPDATED_AT TIMESTAMP(6))
+PRIMARY INDEX ( PAYMENT_METHOD_KEY );
+
+
+comment on TABLE "{{env}}_tgt_t"."PAYMENT_METHOD_DIM" is 'Dimension table storing customer payment method details with historical tracking';
+
+
+COMMENT ON COLUMN {{env}}_tgt_t.PAYMENT_METHOD_DIM.PAYMENT_METHOD_KEY IS 'Surrogate key for the payment method dimension';
+COMMENT ON COLUMN {{env}}_tgt_t.PAYMENT_METHOD_DIM.PAYMENT_METHOD_ID IS 'Natural key from the source system';
+COMMENT ON COLUMN {{env}}_tgt_t.PAYMENT_METHOD_DIM.CUSTOMER_KEY IS 'Reference to the customer dimension (CUSTOMER_DIM)';
+COMMENT ON COLUMN {{env}}_tgt_t.PAYMENT_METHOD_DIM.METHOD_NAME IS 'Name of the payment method (e.g., Credit Card, PayPal)';
+COMMENT ON COLUMN {{env}}_tgt_t.PAYMENT_METHOD_DIM.DETAILS IS 'Additional details about the payment method';
+COMMENT ON COLUMN {{env}}_tgt_t.PAYMENT_METHOD_DIM.START_DATE IS 'Start date of the historical record for the payment method';
+COMMENT ON COLUMN {{env}}_tgt_t.PAYMENT_METHOD_DIM.END_DATE IS 'End date of the historical record for the payment method; NULL for the current record';
+COMMENT ON COLUMN {{env}}_tgt_t.PAYMENT_METHOD_DIM.CREATED_AT IS 'Timestamp when the record was created in the core database';
+COMMENT ON COLUMN {{env}}_tgt_t.PAYMENT_METHOD_DIM.UPDATED_AT IS 'Timestamp when the record was last updated in the core database';
+
+
+COLLECT STATISTICS 
+                   -- default SYSTEM SAMPLE PERCENT 
+            COLUMN ( PAYMENT_METHOD_KEY,CUSTOMER_KEY ) , 
+            COLUMN ( PAYMENT_METHOD_KEY ) 
+                ON {{env}}_tgt_t.PAYMENT_METHOD_DIM 
+;

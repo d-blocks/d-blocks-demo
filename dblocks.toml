@@ -1,0 +1,17 @@
+config_version = "1.0.0"
+
+[ environments.d-blocks-demo ] 
+
+# fill in the Host you obtained from the ClearScape experience - it should look simillar to this
+host = "d-bee01-xw47mw03wc3df8q7.env.clearscape.teradata.com"
+username = "demo_user"
+password = "d-bee01"        # We keep password here for demo purposes - it is strongly recommended 
+							 # to define user password via environment variable
+
+extraction.databases = [ "dev_admin" ]
+git_branch = "master"
+writer.target_dir="./meta"
+tagging_rules = [ "{{env}}%" ]
+
+[ environments.d-blocks-demo.tagging_variables ]
+env = "dev"

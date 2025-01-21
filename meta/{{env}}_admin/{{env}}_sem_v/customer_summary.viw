@@ -1,0 +1,9 @@
+-- * Views
+-- View for CUSTOMER_SUMMARY
+REPLACE VIEW {{env}}_sem_v.CUSTOMER_SUMMARY AS
+SELECT *
+FROM {{env}}_sem_t.CUSTOMER_SUMMARY
+;
+
+
+comment on VIEW "{{env}}_sem_v"."CUSTOMER_SUMMARY" is '1:1 view for CUSTOMER_SUMMARY table, representing customer performance metrics and historical tracking';

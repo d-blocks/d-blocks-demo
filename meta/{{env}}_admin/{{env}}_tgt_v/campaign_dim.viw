@@ -1,0 +1,8 @@
+-- View for CAMPAIGN_DIM
+REPLACE VIEW {{env}}_tgt_v.CAMPAIGN_DIM AS
+SELECT *
+FROM {{env}}_tgt_t.CAMPAIGN_DIM
+;
+
+
+comment on VIEW "{{env}}_tgt_v"."CAMPAIGN_DIM" is '1:1 view for CAMPAIGN_DIM table, representing campaign details with historical tracking';

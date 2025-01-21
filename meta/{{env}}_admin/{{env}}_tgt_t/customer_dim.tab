@@ -1,0 +1,37 @@
+CREATE MULTISET TABLE {{env}}_tgt_t.CUSTOMER_DIM ,FALLBACK ,
+     NO BEFORE JOURNAL,
+     NO AFTER JOURNAL,
+     CHECKSUM = DEFAULT,
+     DEFAULT MERGEBLOCKRATIO,
+     MAP = TD_MAP1
+     (
+      CUSTOMER_KEY INTEGER NOT NULL,
+      CUSTOMER_ID INTEGER,
+      CUSTOMER_NAME VARCHAR(255) CHARACTER SET LATIN CASESPECIFIC,
+      DATE_OF_BIRTH DATE FORMAT 'YY/MM/DD',
+      GENDER CHAR(1) CHARACTER SET LATIN CASESPECIFIC,
+      EMAIL VARCHAR(255) CHARACTER SET LATIN CASESPECIFIC,
+      PHONE_NUMBER VARCHAR(20) CHARACTER SET LATIN CASESPECIFIC,
+      ADDRESS_KEY INTEGER,
+      START_DATE DATE FORMAT 'YY/MM/DD' NOT NULL,
+      END_DATE DATE FORMAT 'YY/MM/DD',
+      CREATED_AT TIMESTAMP(6),
+      UPDATED_AT TIMESTAMP(6))
+PRIMARY INDEX ( CUSTOMER_KEY );
+
+
+comment on TABLE "{{env}}_tgt_t"."CUSTOMER_DIM" is 'Dimension table storing customer information';
+
+
+COMMENT ON COLUMN {{env}}_tgt_t.CUSTOMER_DIM.CUSTOMER_KEY IS 'Surrogate key for the customer dimension';
+COMMENT ON COLUMN {{env}}_tgt_t.CUSTOMER_DIM.CUSTOMER_ID IS 'Natural key from the source system';
+COMMENT ON COLUMN {{env}}_tgt_t.CUSTOMER_DIM.CUSTOMER_NAME IS 'Name of the customer';
+COMMENT ON COLUMN {{env}}_tgt_t.CUSTOMER_DIM.DATE_OF_BIRTH IS 'Customer''s date of birth';
+COMMENT ON COLUMN {{env}}_tgt_t.CUSTOMER_DIM.GENDER IS 'Gender of the customer (M/F/O)';
+COMMENT ON COLUMN {{env}}_tgt_t.CUSTOMER_DIM.EMAIL IS 'Email address of the customer';
+COMMENT ON COLUMN {{env}}_tgt_t.CUSTOMER_DIM.PHONE_NUMBER IS 'Phone number of the customer';
+COMMENT ON COLUMN {{env}}_tgt_t.CUSTOMER_DIM.ADDRESS_KEY IS 'Reference to address dimension (ADDRESS_DIM)';
+COMMENT ON COLUMN {{env}}_tgt_t.CUSTOMER_DIM.START_DATE IS 'Start date of the historical record';
+COMMENT ON COLUMN {{env}}_tgt_t.CUSTOMER_DIM.END_DATE IS 'End date of the historical record; NULL for the current record';
+COMMENT ON COLUMN {{env}}_tgt_t.CUSTOMER_DIM.CREATED_AT IS 'Timestamp when the record was created';
+COMMENT ON COLUMN {{env}}_tgt_t.CUSTOMER_DIM.UPDATED_AT IS 'Timestamp when the record was last updated';

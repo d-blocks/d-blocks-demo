@@ -1,0 +1,8 @@
+-- View for ACCOUNT_FACT
+REPLACE VIEW {{env}}_tgt_v.ACCOUNT_FACT AS
+SELECT *
+FROM {{env}}_tgt_t.ACCOUNT_FACT
+;
+
+
+comment on VIEW "{{env}}_tgt_v"."ACCOUNT_FACT" is '1:1 view for ACCOUNT_FACT table, representing account-level fact data with historical tracking';
