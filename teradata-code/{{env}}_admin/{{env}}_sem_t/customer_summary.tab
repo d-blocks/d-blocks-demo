@@ -1,0 +1,35 @@
+CREATE MULTISET TABLE {{env}}_sem_t.CUSTOMER_SUMMARY ,FALLBACK ,
+     NO BEFORE JOURNAL,
+     NO AFTER JOURNAL,
+     CHECKSUM = DEFAULT,
+     DEFAULT MERGEBLOCKRATIO,
+     MAP = TD_MAP1
+     (
+      CUSTOMER_KEY INTEGER NOT NULL,
+      CUSTOMER_NAME VARCHAR(255) CHARACTER SET LATIN CASESPECIFIC,
+      GENDER CHAR(1) CHARACTER SET LATIN CASESPECIFIC,
+      AGE INTEGER,
+      TOTAL_ORDERS INTEGER,
+      TOTAL_SPENT DECIMAL(18,2),
+      START_DATE DATE FORMAT 'YY/MM/DD' NOT NULL,
+      END_DATE DATE FORMAT 'YY/MM/DD',
+      CREATED_AT TIMESTAMP(6),
+      UPDATED_AT TIMESTAMP(6), 
+PRIMARY KEY ( CUSTOMER_KEY ))
+
+;
+
+
+comment on TABLE "{{env}}_sem_t"."CUSTOMER_SUMMARY" is 'Table summarizing customer details, metrics, and performance with historical tracking';
+
+
+COMMENT ON COLUMN {{env}}_sem_t.CUSTOMER_SUMMARY.CUSTOMER_KEY IS 'Primary key for the customer summary, derived from CUSTOMER_DIM';
+COMMENT ON COLUMN {{env}}_sem_t.CUSTOMER_SUMMARY.CUSTOMER_NAME IS 'Name of the customer';
+COMMENT ON COLUMN {{env}}_sem_t.CUSTOMER_SUMMARY.GENDER IS 'Gender of the customer (M/F/O)';
+COMMENT ON COLUMN {{env}}_sem_t.CUSTOMER_SUMMARY.AGE IS 'Calculated age of the customer at the time of reporting';
+COMMENT ON COLUMN {{env}}_sem_t.CUSTOMER_SUMMARY.TOTAL_ORDERS IS 'Total number of orders placed by the customer';
+COMMENT ON COLUMN {{env}}_sem_t.CUSTOMER_SUMMARY.TOTAL_SPENT IS 'Total amount spent by the customer across all orders';
+COMMENT ON COLUMN {{env}}_sem_t.CUSTOMER_SUMMARY.START_DATE IS 'Start date for the historical record in the semantic layer';
+COMMENT ON COLUMN {{env}}_sem_t.CUSTOMER_SUMMARY.END_DATE IS 'End date for the historical record; NULL for the current record';
+COMMENT ON COLUMN {{env}}_sem_t.CUSTOMER_SUMMARY.CREATED_AT IS 'Timestamp when the record was created';
+COMMENT ON COLUMN {{env}}_sem_t.CUSTOMER_SUMMARY.UPDATED_AT IS 'Timestamp when the record was last updated';
