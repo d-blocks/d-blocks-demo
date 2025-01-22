@@ -1,0 +1,15 @@
+.dblocks-secrets.toml
+context/
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+__pycache__/
+*.py[cod]
+*$py.class
+# C extensions
+*.so
+*.log

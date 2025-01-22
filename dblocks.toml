@@ -1,0 +1,38 @@
+config_version = "1.0.0"
+ctx_dir = "./context"
+report_dir = "./context/report"
+
+[ packager ]        
+package_dir = "./pkg"
+steps_subdir = "db/Teradata"
+safe_deletion_limit = 50
+interactive = true
+
+
+[ logging ]
+console_log_level = "INFO"
+other_sinks.debug_sink.sink = "./log/dblocks.log"
+other_sinks.debug_sink.level = "DEBUG"
+other_sinks.debug_sink.serialize = false
+other_sinks.debug_sink.rotation = "5 days"
+other_sinks.debug_sink.retention = "15 days"
+
+[ environments.dev01 ] 
+
+env = "dev01"
+platform = "teradata"
+host = "192.168.1.119"
+username = "dbc"
+connection_parameters.tmode = "TERA"
+extraction.databases = [ "dev01_admin" ]
+git_branch = "feature/demo-init-0.1"
+writer.target_dir="./teradata-code"
+
+########################################################################
+# tagging_rules a tagging_variables
+tagging_rules = [
+    "{{env}}%"
+]
+
+[ environments.dev01.tagging_variables ]
+env = "dev01"
