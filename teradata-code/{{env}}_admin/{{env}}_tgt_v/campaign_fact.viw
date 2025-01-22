@@ -1,0 +1,8 @@
+-- View for CAMPAIGN_FACT
+REPLACE VIEW {{env}}_tgt_v.CAMPAIGN_FACT AS
+SELECT *
+FROM {{env}}_tgt_t.CAMPAIGN_FACT
+;
+
+
+comment on VIEW "{{env}}_tgt_v"."CAMPAIGN_FACT" is '1:1 view for CAMPAIGN_FACT table, representing campaign responses with historical tracking';
