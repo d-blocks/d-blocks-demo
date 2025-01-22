@@ -1,0 +1,27 @@
+REPLACE TRIGGER {{env}}_stg_t.TRG_V3D_CUSTOMERS_INSERT
+AFTER INSERT ON {{env}}_stg_t.V3D_CUSTOMERS
+REFERENCING NEW AS NEW_ROW
+FOR EACH ROW
+(
+    INSERT INTO {{env}}_stg_t.V3D_CUSTOMERS_LOG (
+        CUSTOMER_ID,
+        OPERATION,
+        OPERATION_DATE,
+        CUSTOMER_NAME,
+        DATE_OF_BIRTH,
+        GENDER,
+        EMAIL,
+        PHONE_NUMBER
+    )
+    VALUES (
+        NEW_ROW.CUSTOMER_ID,
+        'INSERT',
+        CURRENT_TIMESTAMP,
+        NEW_ROW.CUSTOMER_NAME,
+        NEW_ROW.DATE_OF_BIRTH,
+        NEW_ROW.GENDER,
+        NEW_ROW.EMAIL,
+        NEW_ROW.PHONE_NUMBER
+    );
+)
+;
