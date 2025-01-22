@@ -1,0 +1,27 @@
+CREATE MULTISET TABLE {{env}}_tgt_t.ACCOUNT_FACT ,FALLBACK ,
+     NO BEFORE JOURNAL,
+     NO AFTER JOURNAL,
+     CHECKSUM = DEFAULT,
+     DEFAULT MERGEBLOCKRATIO,
+     MAP = TD_MAP1
+     (
+      ACCOUNT_KEY INTEGER NOT NULL,
+      ACCOUNT_ID INTEGER,
+      CUSTOMER_KEY INTEGER,
+      ACCOUNT_TYPE VARCHAR(50) CHARACTER SET LATIN CASESPECIFIC,
+      BALANCE DECIMAL(18,2),
+      OPENED_DATE DATE FORMAT 'YY/MM/DD',
+      STATUS VARCHAR(20) CHARACTER SET LATIN CASESPECIFIC,
+      START_DATE DATE FORMAT 'YY/MM/DD' NOT NULL,
+      END_DATE DATE FORMAT 'YY/MM/DD',
+      CREATED_AT TIMESTAMP(6),
+      UPDATED_AT TIMESTAMP(6))
+PRIMARY INDEX ( ACCOUNT_KEY )
+;
+
+
+comment on TABLE "{{env}}_tgt_t"."ACCOUNT_FACT" is 'Fact table storing account-related data with historical tracking';
+
+
+COMMENT ON COLUMN {{env}}_tgt_t.ACCOUNT_FACT.START_DATE IS 'Start date of the historical record';
+COMMENT ON COLUMN {{env}}_tgt_t.ACCOUNT_FACT.END_DATE IS 'End date of the historical record; NULL for the current record';
