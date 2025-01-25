@@ -1,0 +1,8 @@
+-- View for PRODUCT_SALES
+REPLACE VIEW {{env}}_sem_v.PRODUCT_SALES AS
+SELECT *
+FROM {{env}}_sem_t.PRODUCT_SALES
+;
+
+
+comment on VIEW "{{env}}_sem_v"."PRODUCT_SALES" is '1:1 view for PRODUCT_SALES table, representing product sales performance and historical tracking';

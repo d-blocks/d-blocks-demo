@@ -1,0 +1,8 @@
+-- View for CAMPAIGN_PERFORMANCE
+REPLACE VIEW {{env}}_sem_v.CAMPAIGN_PERFORMANCE AS
+SELECT *
+FROM {{env}}_sem_t.CAMPAIGN_PERFORMANCE
+;
+
+
+comment on VIEW "{{env}}_sem_v"."CAMPAIGN_PERFORMANCE" is '1:1 view for CAMPAIGN_PERFORMANCE table, representing marketing campaign performance metrics and historical tracking';

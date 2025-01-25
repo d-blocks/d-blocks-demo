@@ -1,0 +1,36 @@
+CREATE MULTISET TABLE {{env}}_tgt_t.ADDRESS_DIM ,FALLBACK ,
+     NO BEFORE JOURNAL,
+     NO AFTER JOURNAL,
+     CHECKSUM = DEFAULT,
+     DEFAULT MERGEBLOCKRATIO,
+     MAP = TD_MAP1
+     (
+      ADDRESS_KEY INTEGER NOT NULL,
+      ADDRESS_ID INTEGER,
+      STREET_ADDRESS VARCHAR(255) CHARACTER SET LATIN CASESPECIFIC,
+      CITY VARCHAR(100) CHARACTER SET LATIN CASESPECIFIC,
+      STATE VARCHAR(100) CHARACTER SET LATIN CASESPECIFIC,
+      POSTAL_CODE VARCHAR(20) CHARACTER SET LATIN CASESPECIFIC,
+      COUNTRY VARCHAR(100) CHARACTER SET LATIN CASESPECIFIC,
+      START_DATE DATE FORMAT 'YY/MM/DD' NOT NULL,
+      END_DATE DATE FORMAT 'YY/MM/DD',
+      CREATED_AT TIMESTAMP(6),
+      UPDATED_AT TIMESTAMP(6))
+PRIMARY INDEX ( ADDRESS_KEY )
+;
+
+
+comment on TABLE "{{env}}_tgt_t"."ADDRESS_DIM" is 'Dimension table storing customer address information';
+
+
+COMMENT ON COLUMN {{env}}_tgt_t.ADDRESS_DIM.ADDRESS_KEY IS 'Surrogate key for the address dimension';
+COMMENT ON COLUMN {{env}}_tgt_t.ADDRESS_DIM.ADDRESS_ID IS 'Natural key from the source system';
+COMMENT ON COLUMN {{env}}_tgt_t.ADDRESS_DIM.STREET_ADDRESS IS 'Street address';
+COMMENT ON COLUMN {{env}}_tgt_t.ADDRESS_DIM.CITY IS 'City of the address';
+COMMENT ON COLUMN {{env}}_tgt_t.ADDRESS_DIM.STATE IS 'State or province of the address';
+COMMENT ON COLUMN {{env}}_tgt_t.ADDRESS_DIM.POSTAL_CODE IS 'Postal or ZIP code of the address';
+COMMENT ON COLUMN {{env}}_tgt_t.ADDRESS_DIM.COUNTRY IS 'Country of the address';
+COMMENT ON COLUMN {{env}}_tgt_t.ADDRESS_DIM.START_DATE IS 'Start date of the historical record';
+COMMENT ON COLUMN {{env}}_tgt_t.ADDRESS_DIM.END_DATE IS 'End date of the historical record; NULL for the current record';
+COMMENT ON COLUMN {{env}}_tgt_t.ADDRESS_DIM.CREATED_AT IS 'Timestamp when the record was created';
+COMMENT ON COLUMN {{env}}_tgt_t.ADDRESS_DIM.UPDATED_AT IS 'Timestamp when the record was last updated';

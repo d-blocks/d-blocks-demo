@@ -1,0 +1,850 @@
+[
+    {
+        "database_name": "All",
+        "database_tag": "All",
+        "parent_name": "DBC",
+        "parent_tag": "DBC",
+        "comment_string": null,
+        "database_details": {
+            "owner_name": "DBC",
+            "perm_space": 0,
+            "spool_space": 39662995374,
+            "temp_space": 39662995374,
+            "db_kind": "U",
+            "platform": "teradata"
+        },
+        "parent_tags_in_scope": []
+    },
+    {
+        "database_name": "console",
+        "database_tag": "console",
+        "parent_name": "DBC",
+        "parent_tag": "DBC",
+        "comment_string": null,
+        "database_details": {
+            "owner_name": "DBC",
+            "perm_space": 50000,
+            "spool_space": 50000,
+            "temp_space": 39662995374,
+            "db_kind": "U",
+            "platform": "teradata"
+        },
+        "parent_tags_in_scope": []
+    },
+    {
+        "database_name": "Crashdumps",
+        "database_tag": "Crashdumps",
+        "parent_name": "DBC",
+        "parent_tag": "DBC",
+        "comment_string": "The ID 'Crashdumps' is reserved for use by Crashdumps Processing Software",
+        "database_details": {
+            "owner_name": "DBC",
+            "perm_space": 10351597568,
+            "spool_space": 39662995374,
+            "temp_space": 39662995374,
+            "db_kind": "U",
+            "platform": "teradata"
+        },
+        "parent_tags_in_scope": []
+    },
+    {
+        "database_name": "dbadmin",
+        "database_tag": "dbadmin",
+        "parent_name": "DBC",
+        "parent_tag": "DBC",
+        "comment_string": null,
+        "database_details": {
+            "owner_name": "DBC",
+            "perm_space": 4000000000,
+            "spool_space": 39662995374,
+            "temp_space": 39662995374,
+            "db_kind": "D",
+            "platform": "teradata"
+        },
+        "parent_tags_in_scope": []
+    },
+    {
+        "database_name": "DBC",
+        "database_tag": "DBC",
+        "parent_name": "DBC",
+        "parent_tag": "DBC",
+        "comment_string": null,
+        "database_details": {
+            "owner_name": "DBC",
+            "perm_space": 4479743070,
+            "spool_space": 39662995374,
+            "temp_space": 39662995374,
+            "db_kind": "U",
+            "platform": "teradata"
+        },
+        "parent_tags_in_scope": []
+    },
+    {
+        "database_name": "dbcmngr",
+        "database_tag": "dbcmngr",
+        "parent_name": "DBC",
+        "parent_tag": "DBC",
+        "comment_string": null,
+        "database_details": {
+            "owner_name": "DBC",
+            "perm_space": 100000000,
+            "spool_space": 39662995374,
+            "temp_space": 39662995374,
+            "db_kind": "D",
+            "platform": "teradata"
+        },
+        "parent_tags_in_scope": []
+    },
+    {
+        "database_name": "Default",
+        "database_tag": "Default",
+        "parent_name": "DBC",
+        "parent_tag": "DBC",
+        "comment_string": null,
+        "database_details": {
+            "owner_name": "DBC",
+            "perm_space": 0,
+            "spool_space": 39662995374,
+            "temp_space": 39662995374,
+            "db_kind": "U",
+            "platform": "teradata"
+        },
+        "parent_tags_in_scope": []
+    },
+    {
+        "database_name": "dev01_admin",
+        "database_tag": "{{env}}_admin",
+        "parent_name": "dev_env",
+        "parent_tag": "dev_env",
+        "comment_string": null,
+        "database_details": {
+            "owner_name": "dev_env",
+            "perm_space": 0,
+            "spool_space": 39662995374,
+            "temp_space": 39662995374,
+            "db_kind": "D",
+            "platform": "teradata"
+        },
+        "parent_tags_in_scope": []
+    },
+    {
+        "database_name": "dev01_sem_t",
+        "database_tag": "{{env}}_sem_t",
+        "parent_name": "dev01_admin",
+        "parent_tag": "{{env}}_admin",
+        "comment_string": null,
+        "database_details": {
+            "owner_name": "dev01_admin",
+            "perm_space": 1000000000,
+            "spool_space": 39662995374,
+            "temp_space": 39662995374,
+            "db_kind": "D",
+            "platform": "teradata"
+        },
+        "parent_tags_in_scope": []
+    },
+    {
+        "database_name": "dev01_sem_v",
+        "database_tag": "{{env}}_sem_v",
+        "parent_name": "dev01_admin",
+        "parent_tag": "{{env}}_admin",
+        "comment_string": null,
+        "database_details": {
+            "owner_name": "dev01_admin",
+            "perm_space": 0,
+            "spool_space": 39662995374,
+            "temp_space": 39662995374,
+            "db_kind": "D",
+            "platform": "teradata"
+        },
+        "parent_tags_in_scope": []
+    },
+    {
+        "database_name": "dev01_stg_t",
+        "database_tag": "{{env}}_stg_t",
+        "parent_name": "dev01_admin",
+        "parent_tag": "{{env}}_admin",
+        "comment_string": null,
+        "database_details": {
+            "owner_name": "dev01_admin",
+            "perm_space": 1000000000,
+            "spool_space": 39662995374,
+            "temp_space": 39662995374,
+            "db_kind": "D",
+            "platform": "teradata"
+        },
+        "parent_tags_in_scope": []
+    },
+    {
+        "database_name": "dev01_stg_v",
+        "database_tag": "{{env}}_stg_v",
+        "parent_name": "dev01_admin",
+        "parent_tag": "{{env}}_admin",
+        "comment_string": null,
+        "database_details": {
+            "owner_name": "dev01_admin",
+            "perm_space": 0,
+            "spool_space": 39662995374,
+            "temp_space": 39662995374,
+            "db_kind": "D",
+            "platform": "teradata"
+        },
+        "parent_tags_in_scope": []
+    },
+    {
+        "database_name": "dev01_tgt_t",
+        "database_tag": "{{env}}_tgt_t",
+        "parent_name": "dev01_admin",
+        "parent_tag": "{{env}}_admin",
+        "comment_string": null,
+        "database_details": {
+            "owner_name": "dev01_admin",
+            "perm_space": 1000000000,
+            "spool_space": 39662995374,
+            "temp_space": 39662995374,
+            "db_kind": "D",
+            "platform": "teradata"
+        },
+        "parent_tags_in_scope": []
+    },
+    {
+        "database_name": "dev01_tgt_v",
+        "database_tag": "{{env}}_tgt_v",
+        "parent_name": "dev01_admin",
+        "parent_tag": "{{env}}_admin",
+        "comment_string": null,
+        "database_details": {
+            "owner_name": "dev01_admin",
+            "perm_space": 0,
+            "spool_space": 39662995374,
+            "temp_space": 39662995374,
+            "db_kind": "D",
+            "platform": "teradata"
+        },
+        "parent_tags_in_scope": []
+    },
+    {
+        "database_name": "dev01_tmp_v",
+        "database_tag": "{{env}}_tmp_v",
+        "parent_name": "dev01_admin",
+        "parent_tag": "{{env}}_admin",
+        "comment_string": null,
+        "database_details": {
+            "owner_name": "dev01_admin",
+            "perm_space": 0,
+            "spool_space": 39662995374,
+            "temp_space": 39662995374,
+            "db_kind": "D",
+            "platform": "teradata"
+        },
+        "parent_tags_in_scope": []
+    },
+    {
+        "database_name": "dev01_wrk",
+        "database_tag": "{{env}}_wrk",
+        "parent_name": "dev01_admin",
+        "parent_tag": "{{env}}_admin",
+        "comment_string": null,
+        "database_details": {
+            "owner_name": "dev01_admin",
+            "perm_space": 104857600,
+            "spool_space": 39662995374,
+            "temp_space": 39662995374,
+            "db_kind": "D",
+            "platform": "teradata"
+        },
+        "parent_tags_in_scope": []
+    },
+    {
+        "database_name": "dev_env",
+        "database_tag": "dev_env",
+        "parent_name": "dbadmin",
+        "parent_tag": "dbadmin",
+        "comment_string": null,
+        "database_details": {
+            "owner_name": "dbadmin",
+            "perm_space": 3000000000,
+            "spool_space": 39662995374,
+            "temp_space": 39662995374,
+            "db_kind": "D",
+            "platform": "teradata"
+        },
+        "parent_tags_in_scope": []
+    },
+    {
+        "database_name": "External_AP",
+        "database_tag": "External_AP",
+        "parent_name": "DBC",
+        "parent_tag": "DBC",
+        "comment_string": "The ID 'External_AP' is reserved for use by LDAP Auto Provisioning",
+        "database_details": {
+            "owner_name": "DBC",
+            "perm_space": 160000000,
+            "spool_space": 39662995374,
+            "temp_space": 39662995374,
+            "db_kind": "U",
+            "platform": "teradata"
+        },
+        "parent_tags_in_scope": []
+    },
+    {
+        "database_name": "EXTUSER",
+        "database_tag": "EXTUSER",
+        "parent_name": "EXTUSER",
+        "parent_tag": "EXTUSER",
+        "comment_string": null,
+        "database_details": {
+            "owner_name": "EXTUSER",
+            "perm_space": 0,
+            "spool_space": 39662995374,
+            "temp_space": 39662995374,
+            "db_kind": "U",
+            "platform": "teradata"
+        },
+        "parent_tags_in_scope": []
+    },
+    {
+        "database_name": "LockLogShredder",
+        "database_tag": "LockLogShredder",
+        "parent_name": "DBC",
+        "parent_tag": "DBC",
+        "comment_string": null,
+        "database_details": {
+            "owner_name": "DBC",
+            "perm_space": 4800000,
+            "spool_space": 39662995374,
+            "temp_space": 39662995374,
+            "db_kind": "U",
+            "platform": "teradata"
+        },
+        "parent_tags_in_scope": []
+    },
+    {
+        "database_name": "mldb",
+        "database_tag": "mldb",
+        "parent_name": "DBC",
+        "parent_tag": "DBC",
+        "comment_string": null,
+        "database_details": {
+            "owner_name": "DBC",
+            "perm_space": 100000000,
+            "spool_space": 39662995374,
+            "temp_space": 39662995374,
+            "db_kind": "U",
+            "platform": "teradata"
+        },
+        "parent_tags_in_scope": []
+    },
+    {
+        "database_name": "PUBLIC",
+        "database_tag": "PUBLIC",
+        "parent_name": "DBC",
+        "parent_tag": "DBC",
+        "comment_string": null,
+        "database_details": {
+            "owner_name": "DBC",
+            "perm_space": 0,
+            "spool_space": 39662995374,
+            "temp_space": 39662995374,
+            "db_kind": "U",
+            "platform": "teradata"
+        },
+        "parent_tags_in_scope": []
+    },
+    {
+        "database_name": "SQLJ",
+        "database_tag": "SQLJ",
+        "parent_name": "DBC",
+        "parent_tag": "DBC",
+        "comment_string": null,
+        "database_details": {
+            "owner_name": "DBC",
+            "perm_space": 6400000,
+            "spool_space": 39662995374,
+            "temp_space": 39662995374,
+            "db_kind": "D",
+            "platform": "teradata"
+        },
+        "parent_tags_in_scope": []
+    },
+    {
+        "database_name": "SysAdmin",
+        "database_tag": "SysAdmin",
+        "parent_name": "DBC",
+        "parent_tag": "DBC",
+        "comment_string": "The ID 'SysAdmin' is reserved for use by the System Administrators",
+        "database_details": {
+            "owner_name": "DBC",
+            "perm_space": 160000000,
+            "spool_space": 39662995374,
+            "temp_space": 39662995374,
+            "db_kind": "U",
+            "platform": "teradata"
+        },
+        "parent_tags_in_scope": []
+    },
+    {
+        "database_name": "SYSBAR",
+        "database_tag": "SYSBAR",
+        "parent_name": "DBC",
+        "parent_tag": "DBC",
+        "comment_string": null,
+        "database_details": {
+            "owner_name": "DBC",
+            "perm_space": 320000000,
+            "spool_space": 39662995374,
+            "temp_space": 39662995374,
+            "db_kind": "D",
+            "platform": "teradata"
+        },
+        "parent_tags_in_scope": []
+    },
+    {
+        "database_name": "SYSJDBC",
+        "database_tag": "SYSJDBC",
+        "parent_name": "DBC",
+        "parent_tag": "DBC",
+        "comment_string": null,
+        "database_details": {
+            "owner_name": "DBC",
+            "perm_space": 16000000,
+            "spool_space": 39662995374,
+            "temp_space": 39662995374,
+            "db_kind": "D",
+            "platform": "teradata"
+        },
+        "parent_tags_in_scope": []
+    },
+    {
+        "database_name": "SYSLIB",
+        "database_tag": "SYSLIB",
+        "parent_name": "DBC",
+        "parent_tag": "DBC",
+        "comment_string": null,
+        "database_details": {
+            "owner_name": "DBC",
+            "perm_space": 320000000,
+            "spool_space": 39662995374,
+            "temp_space": 39662995374,
+            "db_kind": "D",
+            "platform": "teradata"
+        },
+        "parent_tags_in_scope": []
+    },
+    {
+        "database_name": "SYSSPATIAL",
+        "database_tag": "SYSSPATIAL",
+        "parent_name": "DBC",
+        "parent_tag": "DBC",
+        "comment_string": null,
+        "database_details": {
+            "owner_name": "DBC",
+            "perm_space": 48000000,
+            "spool_space": 39662995374,
+            "temp_space": 39662995374,
+            "db_kind": "D",
+            "platform": "teradata"
+        },
+        "parent_tags_in_scope": []
+    },
+    {
+        "database_name": "SystemFe",
+        "database_tag": "SystemFe",
+        "parent_name": "DBC",
+        "parent_tag": "DBC",
+        "comment_string": "The ID 'SystemFe' is reserved for use by System Field Engineers",
+        "database_details": {
+            "owner_name": "DBC",
+            "perm_space": 6400000000,
+            "spool_space": 39662995374,
+            "temp_space": 39662995374,
+            "db_kind": "U",
+            "platform": "teradata"
+        },
+        "parent_tags_in_scope": []
+    },
+    {
+        "database_name": "SYSUDTLIB",
+        "database_tag": "SYSUDTLIB",
+        "parent_name": "DBC",
+        "parent_tag": "DBC",
+        "comment_string": null,
+        "database_details": {
+            "owner_name": "DBC",
+            "perm_space": 256000000,
+            "spool_space": 39662995374,
+            "temp_space": 39662995374,
+            "db_kind": "D",
+            "platform": "teradata"
+        },
+        "parent_tags_in_scope": []
+    },
+    {
+        "database_name": "SYSUIF",
+        "database_tag": "SYSUIF",
+        "parent_name": "DBC",
+        "parent_tag": "DBC",
+        "comment_string": null,
+        "database_details": {
+            "owner_name": "DBC",
+            "perm_space": 6400000,
+            "spool_space": 39662995374,
+            "temp_space": 39662995374,
+            "db_kind": "D",
+            "platform": "teradata"
+        },
+        "parent_tags_in_scope": []
+    },
+    {
+        "database_name": "Sys_Calendar",
+        "database_tag": "Sys_Calendar",
+        "parent_name": "DBC",
+        "parent_tag": "DBC",
+        "comment_string": null,
+        "database_details": {
+            "owner_name": "DBC",
+            "perm_space": 25600000,
+            "spool_space": 39662995374,
+            "temp_space": 39662995374,
+            "db_kind": "U",
+            "platform": "teradata"
+        },
+        "parent_tags_in_scope": []
+    },
+    {
+        "database_name": "tapidb",
+        "database_tag": "tapidb",
+        "parent_name": "DBC",
+        "parent_tag": "DBC",
+        "comment_string": null,
+        "database_details": {
+            "owner_name": "DBC",
+            "perm_space": 10000000,
+            "spool_space": 39662995374,
+            "temp_space": 39662995374,
+            "db_kind": "U",
+            "platform": "teradata"
+        },
+        "parent_tags_in_scope": []
+    },
+    {
+        "database_name": "TDaaS_BAR",
+        "database_tag": "TDaaS_BAR",
+        "parent_name": "DBC",
+        "parent_tag": "DBC",
+        "comment_string": "As-A-Service : Backup and Restore ",
+        "database_details": {
+            "owner_name": "DBC",
+            "perm_space": 0,
+            "spool_space": 39662995374,
+            "temp_space": 39662995374,
+            "db_kind": "U",
+            "platform": "teradata"
+        },
+        "parent_tags_in_scope": []
+    },
+    {
+        "database_name": "TDaaS_DB",
+        "database_tag": "TDaaS_DB",
+        "parent_name": "DBC",
+        "parent_tag": "DBC",
+        "comment_string": "As-A-Service : APIs DB ",
+        "database_details": {
+            "owner_name": "DBC",
+            "perm_space": 4000000,
+            "spool_space": 39662995374,
+            "temp_space": 39662995374,
+            "db_kind": "D",
+            "platform": "teradata"
+        },
+        "parent_tags_in_scope": []
+    },
+    {
+        "database_name": "TDaaS_Maint",
+        "database_tag": "TDaaS_Maint",
+        "parent_name": "DBC",
+        "parent_tag": "DBC",
+        "comment_string": "As-A-Service Maintenance : Patching and Configuration ",
+        "database_details": {
+            "owner_name": "DBC",
+            "perm_space": 0,
+            "spool_space": 39662995374,
+            "temp_space": 39662995374,
+            "db_kind": "U",
+            "platform": "teradata"
+        },
+        "parent_tags_in_scope": []
+    },
+    {
+        "database_name": "TDaaS_Monitor",
+        "database_tag": "TDaaS_Monitor",
+        "parent_name": "DBC",
+        "parent_tag": "DBC",
+        "comment_string": "As-A-Service Monitor : Monitor Resource Usage ",
+        "database_details": {
+            "owner_name": "DBC",
+            "perm_space": 0,
+            "spool_space": 39662995374,
+            "temp_space": 39662995374,
+            "db_kind": "U",
+            "platform": "teradata"
+        },
+        "parent_tags_in_scope": []
+    },
+    {
+        "database_name": "TDaaS_Support",
+        "database_tag": "TDaaS_Support",
+        "parent_name": "DBC",
+        "parent_tag": "DBC",
+        "comment_string": "As-A-Service Support : Problem and Error Investigation ",
+        "database_details": {
+            "owner_name": "DBC",
+            "perm_space": 0,
+            "spool_space": 39662995374,
+            "temp_space": 39662995374,
+            "db_kind": "U",
+            "platform": "teradata"
+        },
+        "parent_tags_in_scope": []
+    },
+    {
+        "database_name": "TDaaS_TDBCMgmt1",
+        "database_tag": "TDaaS_TDBCMgmt1",
+        "parent_name": "DBC",
+        "parent_tag": "DBC",
+        "comment_string": "As-A-Service : POG/COG router management user",
+        "database_details": {
+            "owner_name": "DBC",
+            "perm_space": 0,
+            "spool_space": 39662995374,
+            "temp_space": 39662995374,
+            "db_kind": "U",
+            "platform": "teradata"
+        },
+        "parent_tags_in_scope": []
+    },
+    {
+        "database_name": "TDaaS_TDBCMgmt2",
+        "database_tag": "TDaaS_TDBCMgmt2",
+        "parent_name": "DBC",
+        "parent_tag": "DBC",
+        "comment_string": "As-A-Service : POG/COG router management user",
+        "database_details": {
+            "owner_name": "DBC",
+            "perm_space": 0,
+            "spool_space": 39662995374,
+            "temp_space": 39662995374,
+            "db_kind": "U",
+            "platform": "teradata"
+        },
+        "parent_tags_in_scope": []
+    },
+    {
+        "database_name": "TDBCMgmt",
+        "database_tag": "TDBCMgmt",
+        "parent_name": "DBC",
+        "parent_tag": "DBC",
+        "comment_string": "POG/COG router management database",
+        "database_details": {
+            "owner_name": "DBC",
+            "perm_space": 250000000,
+            "spool_space": 39662995374,
+            "temp_space": 39662995374,
+            "db_kind": "D",
+            "platform": "teradata"
+        },
+        "parent_tags_in_scope": []
+    },
+    {
+        "database_name": "TDMaps",
+        "database_tag": "TDMaps",
+        "parent_name": "DBC",
+        "parent_tag": "DBC",
+        "comment_string": null,
+        "database_details": {
+            "owner_name": "DBC",
+            "perm_space": 4800000000,
+            "spool_space": 39662995374,
+            "temp_space": 39662995374,
+            "db_kind": "U",
+            "platform": "teradata"
+        },
+        "parent_tags_in_scope": []
+    },
+    {
+        "database_name": "TDPUSER",
+        "database_tag": "TDPUSER",
+        "parent_name": "DBC",
+        "parent_tag": "DBC",
+        "comment_string": null,
+        "database_details": {
+            "owner_name": "DBC",
+            "perm_space": 0,
+            "spool_space": 39662995374,
+            "temp_space": 39662995374,
+            "db_kind": "U",
+            "platform": "teradata"
+        },
+        "parent_tags_in_scope": []
+    },
+    {
+        "database_name": "TDQCD",
+        "database_tag": "TDQCD",
+        "parent_name": "DBC",
+        "parent_tag": "DBC",
+        "comment_string": null,
+        "database_details": {
+            "owner_name": "DBC",
+            "perm_space": 15360000,
+            "spool_space": 39662995374,
+            "temp_space": 39662995374,
+            "db_kind": "D",
+            "platform": "teradata"
+        },
+        "parent_tags_in_scope": []
+    },
+    {
+        "database_name": "TDStats",
+        "database_tag": "TDStats",
+        "parent_name": "DBC",
+        "parent_tag": "DBC",
+        "comment_string": null,
+        "database_details": {
+            "owner_name": "DBC",
+            "perm_space": 6000000,
+            "spool_space": 39662995374,
+            "temp_space": 39662995374,
+            "db_kind": "D",
+            "platform": "teradata"
+        },
+        "parent_tags_in_scope": []
+    },
+    {
+        "database_name": "tdwm",
+        "database_tag": "tdwm",
+        "parent_name": "DBC",
+        "parent_tag": "DBC",
+        "comment_string": null,
+        "database_details": {
+            "owner_name": "DBC",
+            "perm_space": 100000000,
+            "spool_space": 2000000000,
+            "temp_space": 2000000000,
+            "db_kind": "U",
+            "platform": "teradata"
+        },
+        "parent_tags_in_scope": []
+    },
+    {
+        "database_name": "TD_ANALYTICS_DB",
+        "database_tag": "TD_ANALYTICS_DB",
+        "parent_name": "DBC",
+        "parent_tag": "DBC",
+        "comment_string": null,
+        "database_details": {
+            "owner_name": "DBC",
+            "perm_space": 32000000,
+            "spool_space": 39662995374,
+            "temp_space": 39662995374,
+            "db_kind": "D",
+            "platform": "teradata"
+        },
+        "parent_tags_in_scope": []
+    },
+    {
+        "database_name": "TD_SERVER_DB",
+        "database_tag": "TD_SERVER_DB",
+        "parent_name": "DBC",
+        "parent_tag": "DBC",
+        "comment_string": null,
+        "database_details": {
+            "owner_name": "DBC",
+            "perm_space": 1024000000,
+            "spool_space": 39662995374,
+            "temp_space": 39662995374,
+            "db_kind": "D",
+            "platform": "teradata"
+        },
+        "parent_tags_in_scope": []
+    },
+    {
+        "database_name": "TD_SYSFNLIB",
+        "database_tag": "TD_SYSFNLIB",
+        "parent_name": "DBC",
+        "parent_tag": "DBC",
+        "comment_string": null,
+        "database_details": {
+            "owner_name": "DBC",
+            "perm_space": 39387136,
+            "spool_space": 39662995374,
+            "temp_space": 39662995374,
+            "db_kind": "D",
+            "platform": "teradata"
+        },
+        "parent_tags_in_scope": []
+    },
+    {
+        "database_name": "TD_SYSGPL",
+        "database_tag": "TD_SYSGPL",
+        "parent_name": "DBC",
+        "parent_tag": "DBC",
+        "comment_string": null,
+        "database_details": {
+            "owner_name": "DBC",
+            "perm_space": 6400000,
+            "spool_space": 39662995374,
+            "temp_space": 39662995374,
+            "db_kind": "D",
+            "platform": "teradata"
+        },
+        "parent_tags_in_scope": []
+    },
+    {
+        "database_name": "TD_SYSXML",
+        "database_tag": "TD_SYSXML",
+        "parent_name": "DBC",
+        "parent_tag": "DBC",
+        "comment_string": null,
+        "database_details": {
+            "owner_name": "DBC",
+            "perm_space": 6400000,
+            "spool_space": 39662995374,
+            "temp_space": 39662995374,
+            "db_kind": "D",
+            "platform": "teradata"
+        },
+        "parent_tags_in_scope": []
+    },
+    {
+        "database_name": "val",
+        "database_tag": "val",
+        "parent_name": "DBC",
+        "parent_tag": "DBC",
+        "comment_string": null,
+        "database_details": {
+            "owner_name": "DBC",
+            "perm_space": 500000000,
+            "spool_space": 39662995374,
+            "temp_space": 39662995374,
+            "db_kind": "U",
+            "platform": "teradata"
+        },
+        "parent_tags_in_scope": []
+    },
+    {
+        "database_name": "viewpoint",
+        "database_tag": "viewpoint",
+        "parent_name": "DBC",
+        "parent_tag": "DBC",
+        "comment_string": null,
+        "database_details": {
+            "owner_name": "DBC",
+            "perm_space": 10000000,
+            "spool_space": 39662995374,
+            "temp_space": 39662995374,
+            "db_kind": "U",
+            "platform": "teradata"
+        },
+        "parent_tags_in_scope": []
+    }
+]

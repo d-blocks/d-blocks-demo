@@ -1,0 +1,44 @@
+CREATE MULTISET TABLE {{env}}_sem_t.CAMPAIGN_PERFORMANCE ,FALLBACK ,
+     NO BEFORE JOURNAL,
+     NO AFTER JOURNAL,
+     CHECKSUM = DEFAULT,
+     DEFAULT MERGEBLOCKRATIO,
+     MAP = TD_MAP1
+     (
+      CAMPAIGN_KEY INTEGER NOT NULL,
+      CAMPAIGN_NAME VARCHAR(255) CHARACTER SET LATIN CASESPECIFIC,
+      START_DATE DATE FORMAT 'YY/MM/DD' NOT NULL,
+      END_DATE DATE FORMAT 'YY/MM/DD',
+      TOTAL_REACH INTEGER,
+      TOTAL_RESPONSES INTEGER,
+      RESPONSE_RATE DECIMAL(5,2),
+      TOTAL_BUDGET DECIMAL(18,2),
+      TOTAL_SPENT DECIMAL(18,2),
+      CREATED_AT TIMESTAMP(6),
+      UPDATED_AT TIMESTAMP(6), 
+PRIMARY KEY ( CAMPAIGN_KEY ))
+
+;
+
+
+comment on TABLE "{{env}}_sem_t"."CAMPAIGN_PERFORMANCE" is 'Table summarizing the performance metrics of marketing campaigns with historical tracking';
+
+
+COMMENT ON COLUMN {{env}}_sem_t.CAMPAIGN_PERFORMANCE.CAMPAIGN_KEY IS 'Primary key for the campaign performance summary, derived from CAMPAIGN_DIM';
+COMMENT ON COLUMN {{env}}_sem_t.CAMPAIGN_PERFORMANCE.CAMPAIGN_NAME IS 'Name of the campaign being analyzed';
+COMMENT ON COLUMN {{env}}_sem_t.CAMPAIGN_PERFORMANCE.START_DATE IS 'Start date for the historical record in the semantic layer';
+COMMENT ON COLUMN {{env}}_sem_t.CAMPAIGN_PERFORMANCE.END_DATE IS 'End date for the historical record; NULL for the current record';
+COMMENT ON COLUMN {{env}}_sem_t.CAMPAIGN_PERFORMANCE.TOTAL_REACH IS 'Total number of customers reached by the campaign';
+COMMENT ON COLUMN {{env}}_sem_t.CAMPAIGN_PERFORMANCE.TOTAL_RESPONSES IS 'Total number of responses received for the campaign';
+COMMENT ON COLUMN {{env}}_sem_t.CAMPAIGN_PERFORMANCE.RESPONSE_RATE IS 'Percentage of responses compared to the total reach';
+COMMENT ON COLUMN {{env}}_sem_t.CAMPAIGN_PERFORMANCE.TOTAL_BUDGET IS 'Total budget allocated for the campaign';
+COMMENT ON COLUMN {{env}}_sem_t.CAMPAIGN_PERFORMANCE.TOTAL_SPENT IS 'Amount spent during the campaign';
+COMMENT ON COLUMN {{env}}_sem_t.CAMPAIGN_PERFORMANCE.CREATED_AT IS 'Timestamp when the record was created';
+COMMENT ON COLUMN {{env}}_sem_t.CAMPAIGN_PERFORMANCE.UPDATED_AT IS 'Timestamp when the record was last updated';
+
+
+COLLECT STATISTICS 
+                   -- default SYSTEM SAMPLE PERCENT 
+            COLUMN ( CAMPAIGN_KEY ) 
+                ON {{env}}_sem_t.CAMPAIGN_PERFORMANCE 
+;

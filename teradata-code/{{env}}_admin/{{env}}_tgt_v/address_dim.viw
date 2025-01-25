@@ -1,0 +1,8 @@
+-- View for ADDRESS_DIM
+REPLACE VIEW {{env}}_tgt_v.ADDRESS_DIM AS
+SELECT *
+FROM {{env}}_tgt_t.ADDRESS_DIM
+;
+
+
+comment on VIEW "{{env}}_tgt_v"."ADDRESS_DIM" is '1:1 view for ADDRESS_DIM table, representing customer address dimension with historical tracking';

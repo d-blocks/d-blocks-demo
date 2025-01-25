@@ -1,0 +1,8 @@
+-- View for PAYMENT_METHOD_DIM
+REPLACE VIEW {{env}}_tgt_v.PAYMENT_METHOD_DIM AS
+SELECT *
+FROM {{env}}_tgt_t.PAYMENT_METHOD_DIM
+;
+
+
+comment on VIEW "{{env}}_tgt_v"."PAYMENT_METHOD_DIM" is '1:1 view for PAYMENT_METHOD_DIM table, representing payment methods with historical tracking';

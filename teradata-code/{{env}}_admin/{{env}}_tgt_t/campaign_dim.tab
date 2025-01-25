@@ -1,0 +1,32 @@
+CREATE MULTISET TABLE {{env}}_tgt_t.CAMPAIGN_DIM ,FALLBACK ,
+     NO BEFORE JOURNAL,
+     NO AFTER JOURNAL,
+     CHECKSUM = DEFAULT,
+     DEFAULT MERGEBLOCKRATIO,
+     MAP = TD_MAP1
+     (
+      CAMPAIGN_KEY INTEGER NOT NULL,
+      CAMPAIGN_ID INTEGER,
+      CAMPAIGN_NAME VARCHAR(255) CHARACTER SET LATIN CASESPECIFIC,
+      START_DATE DATE FORMAT 'YY/MM/DD' NOT NULL,
+      END_DATE DATE FORMAT 'YY/MM/DD',
+      TARGET_GROUP VARCHAR(255) CHARACTER SET LATIN CASESPECIFIC,
+      BUDGET DECIMAL(18,2),
+      CREATED_AT TIMESTAMP(6),
+      UPDATED_AT TIMESTAMP(6))
+PRIMARY INDEX ( CAMPAIGN_KEY )
+;
+
+
+comment on TABLE "{{env}}_tgt_t"."CAMPAIGN_DIM" is 'Dimension table storing marketing campaign details';
+
+
+COMMENT ON COLUMN {{env}}_tgt_t.CAMPAIGN_DIM.CAMPAIGN_KEY IS 'Surrogate key for the campaign dimension';
+COMMENT ON COLUMN {{env}}_tgt_t.CAMPAIGN_DIM.CAMPAIGN_ID IS 'Natural key from the source system';
+COMMENT ON COLUMN {{env}}_tgt_t.CAMPAIGN_DIM.CAMPAIGN_NAME IS 'Name of the campaign';
+COMMENT ON COLUMN {{env}}_tgt_t.CAMPAIGN_DIM.START_DATE IS 'Start date of the historical record';
+COMMENT ON COLUMN {{env}}_tgt_t.CAMPAIGN_DIM.END_DATE IS 'End date of the historical record; NULL for the current record';
+COMMENT ON COLUMN {{env}}_tgt_t.CAMPAIGN_DIM.TARGET_GROUP IS 'Target group for the campaign';
+COMMENT ON COLUMN {{env}}_tgt_t.CAMPAIGN_DIM.BUDGET IS 'Budget allocated for the campaign';
+COMMENT ON COLUMN {{env}}_tgt_t.CAMPAIGN_DIM.CREATED_AT IS 'Timestamp when the record was created';
+COMMENT ON COLUMN {{env}}_tgt_t.CAMPAIGN_DIM.UPDATED_AT IS 'Timestamp when the record was last updated';

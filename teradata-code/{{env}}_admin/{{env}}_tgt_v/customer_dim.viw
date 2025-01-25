@@ -1,0 +1,8 @@
+-- View for CUSTOMER_DIM
+REPLACE VIEW {{env}}_tgt_v.CUSTOMER_DIM AS
+SELECT *
+FROM {{env}}_tgt_t.CUSTOMER_DIM
+;
+
+
+comment on VIEW "{{env}}_tgt_v"."CUSTOMER_DIM" is '1:1 view for CUSTOMER_DIM table, representing the customer dimension with historical tracking';
