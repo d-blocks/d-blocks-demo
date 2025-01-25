@@ -1,10 +1,5 @@
 REPLACE PROCEDURE {{env}}_wrk.POPULATE_CUSTOMER_SUMMARY()
 BEGIN
-    -- Declare error handling for any SQL exceptions
-    DECLARE EXIT HANDLER FOR SQLEXCEPTION 
-    BEGIN
-        ROLLBACK; -- Rollback any partial changes in case of error
-    END;
 
     -- Populate the CUSTOMER_SUMMARY table with aggregated data
     INSERT INTO {{env}}_sem_t.CUSTOMER_SUMMARY (
@@ -41,7 +36,5 @@ BEGIN
     GROUP BY
         c.CUSTOMER_KEY, c.CUSTOMER_NAME, c.GENDER, c.DATE_OF_BIRTH;
 
-    -- Commit the transaction
-    COMMIT;
 END
 ;
