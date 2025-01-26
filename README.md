@@ -66,7 +66,16 @@ debbie env-deploy d-blocks-demo teradata-code --assume-yes
 
 ## Make changes to your environment in Teradata
 
-TBD
+Logon to the ClearScape environment using the tool of your choice (Teradata Studio, DBeaver, ...).
+
+Create a new object, like so:
+
+```sql
+create table DEV_STG_T.TEST_TABLE (
+  test_id INTEGER NOT NULL
+) UNIQUE PRIMARY INDEX (test_id)
+;
+```
 
 ## Test the extraction functionality
 
@@ -75,6 +84,13 @@ TBD
 ```bash
 debbie env-deploy d-blocks-demo teradata-code --assume-yes
 ```
+
+## Observe the git history
+
+```bash
+git log
+```
+
 
 # d-blocks-demo
 
