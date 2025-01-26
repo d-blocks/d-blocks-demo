@@ -2,6 +2,7 @@
 REPLACE VIEW {{env}}_tgt_v.PAYMENT_METHOD_DIM AS
 SELECT *
 FROM {{env}}_tgt_t.PAYMENT_METHOD_DIM
+
 ;
 
 

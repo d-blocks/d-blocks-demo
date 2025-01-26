@@ -2,6 +2,7 @@
 REPLACE VIEW {{env}}_tgt_v.CAMPAIGN_DIM AS
 SELECT *
 FROM {{env}}_tgt_t.CAMPAIGN_DIM
+
 ;
 
 
