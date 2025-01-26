@@ -3,7 +3,6 @@
 REPLACE VIEW {{env}}_sem_v.CUSTOMER_SUMMARY AS
 SELECT *
 FROM {{env}}_sem_t.CUSTOMER_SUMMARY
-
 ;
 
 

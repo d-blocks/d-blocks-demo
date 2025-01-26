@@ -26,5 +26,4 @@ FOR EACH ROW
         NEW_ROW.STATUS
     );
 )
-
 ;
