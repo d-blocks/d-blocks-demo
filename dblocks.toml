@@ -10,4 +10,5 @@ git_branch = "master"
 writer.target_dir="./teradata-code"
 tagging_rules = [ "{{env}}%" ]
 
-environments.dev.tagging_variables.env = "dev"
+[ environments.dev.tagging_variables ]
+env = "dev"
