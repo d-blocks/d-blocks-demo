@@ -34,7 +34,7 @@ COMMENT ON COLUMN {{env}}_tgt_t.PAYMENT_METHOD_DIM.UPDATED_AT IS 'Timestamp when
 
 COLLECT STATISTICS 
                    -- default SYSTEM SAMPLE PERCENT 
-            COLUMN ( PAYMENT_METHOD_KEY ) , 
-            COLUMN ( PAYMENT_METHOD_KEY,CUSTOMER_KEY ) 
+            COLUMN ( PAYMENT_METHOD_KEY,CUSTOMER_KEY ) , 
+            COLUMN ( PAYMENT_METHOD_KEY ) 
                 ON {{env}}_tgt_t.PAYMENT_METHOD_DIM 
 ;
