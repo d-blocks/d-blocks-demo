@@ -2,6 +2,7 @@
 REPLACE VIEW {{env}}_sem_v.PRODUCT_SALES AS
 SELECT *
 FROM {{env}}_sem_t.PRODUCT_SALES
+
 ;
 
 
