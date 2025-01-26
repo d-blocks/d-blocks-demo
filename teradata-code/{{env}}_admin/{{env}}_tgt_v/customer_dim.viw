@@ -2,7 +2,6 @@
 REPLACE VIEW {{env}}_tgt_v.CUSTOMER_DIM AS
 SELECT *
 FROM {{env}}_tgt_t.CUSTOMER_DIM
-
 ;
 
 
