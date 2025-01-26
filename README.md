@@ -60,7 +60,20 @@ We are now going to demonstrate one of the functionalities offered by `debbie`.
 We are now going to deploy these objects to the Teradata database.
 
 ```bash
-debbie env-deploy d-blocks-demo teradata-code --assume-yes 
+debbie env-deploy d-blocks-demo teradata-code --assume-yes
+```
+
+
+## Make changes to your environment in Teradata
+
+TBD
+
+## Test the extraction functionality
+
+```bash
+
+```bash
+debbie env-deploy d-blocks-demo teradata-code --assume-yes
 ```
 
 # d-blocks-demo
