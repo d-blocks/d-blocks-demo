@@ -14,8 +14,7 @@ CREATE MULTISET TABLE {{env}}_tgt_t.PRODUCT_DIM ,FALLBACK ,
       END_DATE DATE FORMAT 'YY/MM/DD',
       CREATED_AT TIMESTAMP(6),
       UPDATED_AT TIMESTAMP(6))
-PRIMARY INDEX ( PRODUCT_KEY )
-;
+PRIMARY INDEX ( PRODUCT_KEY );
 
 
 comment on TABLE "{{env}}_tgt_t"."PRODUCT_DIM" is 'Dimension table storing product details';

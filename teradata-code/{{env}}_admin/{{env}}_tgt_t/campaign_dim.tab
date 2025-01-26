@@ -14,8 +14,7 @@ CREATE MULTISET TABLE {{env}}_tgt_t.CAMPAIGN_DIM ,FALLBACK ,
       BUDGET DECIMAL(18,2),
       CREATED_AT TIMESTAMP(6),
       UPDATED_AT TIMESTAMP(6))
-PRIMARY INDEX ( CAMPAIGN_KEY )
-;
+PRIMARY INDEX ( CAMPAIGN_KEY );
 
 
 comment on TABLE "{{env}}_tgt_t"."CAMPAIGN_DIM" is 'Dimension table storing marketing campaign details';
