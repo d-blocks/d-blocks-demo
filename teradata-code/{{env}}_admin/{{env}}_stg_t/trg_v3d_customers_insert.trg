@@ -24,5 +24,4 @@ FOR EACH ROW
         NEW_ROW.PHONE_NUMBER
     );
 )
-
 ;
