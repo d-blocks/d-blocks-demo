@@ -1,6 +1,22 @@
 config_version = "1.0.0"
 
-[ environments.d-blocks-demo ] 
+[ environments.dev ] 
+
+# fill in the Host you obtained from the ClearScape experience - it should look simillar to this
+host = "dataops-labs-tu06wk3s0y12l02p.env.clearscape.teradata.com"
+username = "demo_user"
+password = "teradata1234"        # We keep password here for demo purposes - it is strongly recommended 
+							 # to define user password via environment variable
+
+extraction.databases = [ "dev_admin" ]
+writer.target_dir="./structures"
+writer.env_def_dir="./env_definition"
+tagging_rules = [ "{{env}}%" ]
+
+[ environments.dev.tagging_variables ]
+env = "dev"
+
+[ environments.prod ] 
 
 # fill in the Host you obtained from the ClearScape experience - it should look simillar to this
 host = "dataops-labs-tu06wk3s0y12l02p.env.clearscape.teradata.com"
@@ -10,8 +26,9 @@ password = "teradata1234"        # We keep password here for demo purposes - it 
 
 extraction.databases = [ "dev_admin" ]
 git_branch = "master"
-writer.target_dir="./teradata-code"
+writer.target_dir="./structures"
+writer.env_def_dir="./env_definition"
 tagging_rules = [ "{{env}}%" ]
 
-[ environments.d-blocks-demo.tagging_variables ]
-env = "dev"
+[ environments.prod.tagging_variables ]
+env = "prod"
