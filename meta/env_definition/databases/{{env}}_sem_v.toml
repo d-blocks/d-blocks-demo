@@ -1,0 +1,6 @@
+name = "{{env}}_sem_v"
+kind = "database"
+owner = "{{env}}_admin"
+perm_space = "0"
+spool_space = "100000000"
+comment = "Semantic/Business layer views for prod environment"

@@ -1,0 +1,6 @@
+name = "{{env}}_sem_t"
+kind = "database"
+owner = "{{env}}_admin"
+perm_space = "90000000"
+spool_space = "100000000"
+comment = "Semantic/Business layer tables for prod environment"

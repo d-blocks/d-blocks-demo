@@ -1,0 +1,6 @@
+name = "{{env}}_wrk"
+kind = "database"
+owner = "{{env}}_admin"
+perm_space = "10000000"
+spool_space = "100000000"
+comment = "Working database for procedures and temp objects in prod environment"

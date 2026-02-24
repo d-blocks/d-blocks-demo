@@ -1,0 +1,6 @@
+name = "{{env}}_admin"
+kind = "database"
+owner = "{{env}}_env"
+perm_space = "0"
+spool_space = "100000000"
+comment = "Admin database for prod environment"

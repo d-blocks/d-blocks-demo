@@ -1,0 +1,15 @@
+grantee_name = "{{env}}_wrk"
+grantee_type = "database"
+kind = "privileges"
+
+[[grant]]
+database = "{{env}}_sem_t"
+privileges_with_grant_option = ["DELETE", "INSERT", "UPDATE"]
+
+[[grant]]
+database = "{{env}}_tgt_t"
+privileges_with_grant_option = ["SELECT"]
+
+[[grant]]
+database = "{{env}}_tgt_v"
+privileges_with_grant_option = ["SELECT"]

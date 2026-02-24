@@ -8,7 +8,7 @@ username = "demo_user"
 password = "teradata1234"        # We keep password here for demo purposes - it is strongly recommended 
 							 # to define user password via environment variable
 
-extraction.databases = [ "dev_admin" ]
+extraction.databases = [ "dev_env" ]
 writer.target_dir="./structures"
 writer.env_def_dir="./env_definition"
 tagging_rules = [ "{{env}}%" ]
@@ -24,8 +24,7 @@ username = "demo_user"
 password = "teradata1234"        # We keep password here for demo purposes - it is strongly recommended 
 							 # to define user password via environment variable
 
-extraction.databases = [ "dev_admin" ]
-git_branch = "master"
+extraction.databases = [ "prod_env" ]
 writer.target_dir="./structures"
 writer.env_def_dir="./env_definition"
 tagging_rules = [ "{{env}}%" ]

@@ -1,0 +1,7 @@
+grantee_name = "{{env}}_env"
+grantee_type = "user"
+kind = "privileges"
+
+[[grant]]
+database = "{{env}}_wrk"
+privileges = ["ALTER PROCEDURE", "CREATE PROCEDURE", "DROP PROCEDURE"]

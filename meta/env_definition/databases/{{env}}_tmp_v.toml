@@ -1,0 +1,6 @@
+name = "{{env}}_tmp_v"
+kind = "database"
+owner = "{{env}}_admin"
+perm_space = "0"
+spool_space = "100000000"
+comment = "Temporary views for prod environment"

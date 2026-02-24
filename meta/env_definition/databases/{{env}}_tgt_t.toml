@@ -1,0 +1,6 @@
+name = "{{env}}_tgt_t"
+kind = "database"
+owner = "{{env}}_admin"
+perm_space = "100000000"
+spool_space = "100000000"
+comment = "Target tables for prod environment"
